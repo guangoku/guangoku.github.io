@@ -115,7 +115,7 @@ var svg = d3.select(".chart").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-var graph = d3.csv(csvpath, function(data) {
+var graph = d3.csv("./data.csv", function(data) {
   data.forEach(function(d) {
     d.date = +d.date;
     d.value = +d.value;
